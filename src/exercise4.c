@@ -5,8 +5,8 @@
 
 int main() {
     float arr[SIZE];
-    float X;
-    int K;
+    float X = atof(argv[1]);
+    int K = atoi(argv[2]);
     int n = SIZE - 1; 
     char buffer[100]; 
 
@@ -16,16 +16,7 @@ int main() {
     }
 
 
-    if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
-
-        if (sscanf(buffer, "%f %d", &X, &K) != 2) {
-
-            return 1;
-        }
-    } else {
-
-        return 1;
-    }
+    
 
 
     if (K < 0 || K > n) {
