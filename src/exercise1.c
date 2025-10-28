@@ -5,7 +5,7 @@ int main() {
     float sum = 0.0f;
 
 
-    printf("Введите 10 вещественных чисел:\n");
+
     for (int i = 0; i < 10; i++) {
         scanf("%f", &arr[i]);
     }
@@ -18,7 +18,7 @@ int main() {
  
     float average = sum / 10;
 
-    printf("Среднее арифметическое: %.3f\n", average);
+    printf("%.3f\n", average);
 
     return 0;
 }
