@@ -3,13 +3,11 @@
 
 #define SIZE 10
 
-int main() {
+int main(int argc, char **argv) {
     float arr[SIZE];
     float X = atof(argv[1]);
     int K = atoi(argv[2]);
     int n = SIZE - 1; 
-    char buffer[100]; 
-
 
     for (int i = 0; i < n; i++) {
         scanf("%f", &arr[i]);
