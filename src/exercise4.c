@@ -8,7 +8,7 @@ int main() {
     float X;
     int K;
     int n = SIZE - 1; 
-    char buffer[100];
+    char buffer[100]; 
 
 
     for (int i = 0; i < n; i++) {
@@ -17,12 +17,14 @@ int main() {
 
 
     if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
-      
+
         if (sscanf(buffer, "%f %d", &X, &K) != 2) {
-            return 1; 
+
+            return 1;
         }
     } else {
-        return 1; 
+
+        return 1;
     }
 
 
@@ -46,4 +48,3 @@ int main() {
 
     return 0;
 }
-
