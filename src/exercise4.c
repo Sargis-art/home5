@@ -2,36 +2,34 @@
 
 #define SIZE 10
 
-int main(int argc, char *argv[]) {
+int main() {
     float arr[SIZE];
     float X;
     int K;
+    int n = SIZE - 1; // количество изначальных элементов, чтобы хватило места для вставки
 
-
-    printf("\n");
-    for (int i = 0; i < SIZE; i++) {
+    // Считаем n=SIZE-1 элементов
+    for (int i = 0; i < n; i++) {
         scanf("%f", &arr[i]);
     }
 
-
-    printf("\n");
+    // Читаем X и K
     scanf("%f %d", &X, &K);
 
-    if (K < 0 || K >= SIZE) {
-        printf("\n");
-        return 1;
+    // Проверяем корректность K
+    if (K < 0 || K > n) {
+        return 1; // ошибка
     }
 
-
-    for (int i = SIZE - 1; i > K; i--) {
+    // Сдвигаем элементы вправо, начиная с конца массива до K
+    for (int i = n; i > K; i--) {
         arr[i] = arr[i - 1];
     }
 
-
+    // Вставляем X в позицию K
     arr[K] = X;
 
-  
-    printf("\n");
+    // Выводим итоговый массив из SIZE элементов
     for (int i = 0; i < SIZE; i++) {
         printf("%.2f ", arr[i]);
     }
@@ -39,3 +37,4 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
